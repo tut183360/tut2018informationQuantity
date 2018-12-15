@@ -34,6 +34,7 @@ public class TestCase {
 	try {
 	    FrequencerInterface  myObject;
 	    int freq;
+	    int subFreq;
 	    System.out.println("checking s4.B183360.Frequencer");
 	    myObject = new s4.B183360.Frequencer();
 	    myObject.setSpace("Hi Ho Hi Ho".getBytes());
@@ -41,6 +42,9 @@ public class TestCase {
 	    freq = myObject.frequency();
 	    System.out.print("\"H\" in \"Hi Ho Hi Ho\" appears "+freq+" times. ");
 	    if(4 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+	    subFreq = myObject.subByteFrequency(2,8);
+      	System.out.print("\"H\" in \"Hi Ho Hi Ho\" appears "+subFreq+" times from 2 to 8. ");
+      	if(2 == subFreq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
 	}
 	catch(Exception e) {
 	    System.out.println("Exception occurred: STOP");
