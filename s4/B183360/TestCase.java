@@ -34,22 +34,22 @@ public class TestCase {
     	FrequencerInterface  myObject;
     	System.out.println("checking s4.B183360.Frequencer");
 
-	try {	/*TARGET's length is zero.*/
+    try {	/*正常に動作する*/
 		System.out.println("");
-		System.out.println("① This returns -1 when TARGET's length is zero.");
+		System.out.println("正常に動作する");
 	    int freq;
 	    //int subFreq;
 	    //System.out.println("checking s4.B183360.Frequencer");
 	    myObject = new s4.B183360.Frequencer();
 
 	    myObject.setSpace("Hi Ho Hi Ho".getBytes());
-	    myObject.setTarget("".getBytes());
+	    myObject.setTarget("H".getBytes());
 	    freq = myObject.frequency();
 	    System.out.println("＜ホワイトボックステスト＞");
 	    System.out.print("s4.B183360.Frequencer.frequency()メソッドの戻り値:" +freq+ "\n");
 	    System.out.println("＜ブラックボックステスト＞");
-	    System.out.print("入力:文字列は”Hi Ho Hi Ho”にセットする, ターゲットの長さはゼロ\n");
-	    if(-1 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+	    System.out.print("入力:文字列は”Hi Ho Hi Ho”にセットする, ターゲットは”H”にセットする\n");
+	    if(4 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
 
 	    /*
 	    freq = myObject.frequency();
@@ -65,12 +65,29 @@ public class TestCase {
 	    System.out.println("Exception occurred: STOP");
 	}
 
+	try {	/*TARGET's length is zero.*/
+		System.out.println("");
+		System.out.println("① This returns -1 when TARGET's length is zero.");
+	    int freq;
+	    myObject = new s4.B183360.Frequencer();
+
+	    myObject.setSpace("Hi Ho Hi Ho".getBytes());
+	    myObject.setTarget("".getBytes());
+	    freq = myObject.frequency();
+	    System.out.println("＜ホワイトボックステスト＞");
+	    System.out.print("s4.B183360.Frequencer.frequency()メソッドの戻り値:" +freq+ "\n");
+	    System.out.println("＜ブラックボックステスト＞");
+	    System.out.print("入力:文字列は”Hi Ho Hi Ho”にセットする, ターゲットの長さはゼロ\n");
+	    if(-1 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+	}
+	catch(Exception e) {
+	    System.out.println("Exception occurred: STOP");
+	}
+
 	try {	/*TARGET is not set.*/
 		System.out.println("");
 		System.out.println("② This returns -1 when TARGET is not set.");
 	    int freq;
-	    //int subFreq;
-	    //System.out.println("checking s4.B183360.Frequencer");
 	    myObject = new s4.B183360.Frequencer();
 
 	    /*TARGET's length is zero.*/
@@ -91,8 +108,6 @@ public class TestCase {
 		System.out.println("");
 		System.out.println("③ This returns -1 when SPACE's length is zero.");
 	    int freq;
-	    //int subFreq;
-	    //System.out.println("checking s4.B183360.Frequencer");
 	    myObject = new s4.B183360.Frequencer();
 
 	    /*TARGET's length is zero.*/
@@ -113,8 +128,6 @@ public class TestCase {
 		System.out.println("");
 		System.out.println("④ This returns 0 when SPACE is not set.");
 	    int freq;
-	    //int subFreq;
-	    //System.out.println("checking s4.B183360.Frequencer");
 	    myObject = new s4.B183360.Frequencer();
 
 	    /*TARGET's length is zero.*/
