@@ -24,6 +24,7 @@ public class Frequencer implements FrequencerInterface{
     // The variable, "suffixArray" is the sorted array of all suffixes of mySpace.
     // Each suffix is expressed by a integer, which is the starting position in mySpace. // The following is the code to print the variable
 
+
     private void printSuffixArray() {
         if(spaceReady) {
             for(int i=0; i< mySpace.length; i++) {
@@ -141,47 +142,47 @@ public class Frequencer implements FrequencerInterface{
 
     private int subByteStartIndex(int start, int end) {
 
-      try {
-          if(start <= end) {
-            System.out.println("check3: OK");
-          }
-          else {
-            System.out.println("WRONG");
-            System.out.println("case3 : checking s4.B183360.Frequencer");
-            System.out.print("endよりstartの方が大きいです。");
-          }
-      }
-      catch(Exception e) {
-          System.out.println("Exception occurred: STOP");
-      }
+      // try {
+      //     if(start <= end) {
+      //       System.out.println("check3: OK");
+      //     }
+      //     else {
+      //       System.out.println("WRONG");
+      //       System.out.println("case3 : checking s4.B183353.Frequencer");
+      //       System.out.print("endよりstartの方が大きいです。");
+      //     }
+      // }
+      // catch(Exception e) {
+      //     System.out.println("Exception occurred: STOP");
+      // }
 
-      try {
-          if(suffixArray.length != 0) { System.out.println("check4: OK"); }
-            else {
-              System.out.println("WRONG");
-              System.out.println("case4 : checking s4.B183360.Frequencer");
-              System.out.print("mySpaceに文字が指定されていません");
-            }
-          }
-      catch(Exception e) {
-          System.out.println("Exception occurred: STOP");
-      }
+      // try {
+      //     if(suffixArray.length != 0) { System.out.println("check4: OK"); }
+      //       else {
+      //         System.out.println("WRONG");
+      //         System.out.println("case4 : checking s4.B183353.Frequencer");
+      //         System.out.print("mySpaceに文字が指定されていません");
+      //       }
+      //     }
+      // catch(Exception e) {
+      //     System.out.println("Exception occurred: STOP");
+      // }
 
-      try {
-          if(myTarget.length != 0) { System.out.println("check5: OK"); }
-          else {
-            System.out.println("WRONG");
-            System.out.println("case5 : checking s4.B183360.Frequencer");
-            System.out.print("Targetに文字が指定されていません");}
-      }
-      catch(Exception e) {
-          System.out.println("Exception occurred: STOP");
-      }
+      // try {
+      //     if(myTarget.length != 0) { System.out.println("check5: OK"); }
+      //     else {
+      //       System.out.println("WRONG");
+      //       System.out.println("case5 : checking s4.B183353.Frequencer");
+      //       System.out.print("Targetに文字が指定されていません");}
+      // }
+      // catch(Exception e) {
+      //     System.out.println("Exception occurred: STOP");
+      // }
 
 
       for(int i = 0; i < suffixArray.length; i++){
         if(targetCompare(suffixArray[i],start,end) == 0){
-          System.out.println("start :" + i);
+          // System.out.println("start :" + i);
           return i;
         }
       }
@@ -198,47 +199,47 @@ public class Frequencer implements FrequencerInterface{
 
     private int subByteEndIndex(int start, int end) {
 
-      try {
-          if(start <= end) {
-            System.out.println("check6: OK");
-          }
-          else {
-            System.out.println("WRONG");
-            System.out.println("case6 : checking s4.B183360.Frequencer");
-            System.out.print("endよりstartの方が大きいです。");
-          }
-      }
-      catch(Exception e) {
-          System.out.println("Exception occurred: STOP");
-      }
+      // try {
+      //     if(start <= end) {
+      //       System.out.println("check6: OK");
+      //     }
+      //     else {
+      //       System.out.println("WRONG");
+      //       System.out.println("case6 : checking s4.B183353.Frequencer");
+      //       System.out.print("endよりstartの方が大きいです。");
+      //     }
+      // }
+      // catch(Exception e) {
+      //     System.out.println("Exception occurred: STOP");
+      // }
 
-      try {
-          if(suffixArray.length != 0) { System.out.println("check7: OK"); }
-            else {
-              System.out.println("WRONG");
-              System.out.println("case7 : checking s4.B183360.Frequencer");
-              System.out.print("mySpaceに文字が指定されていません");
-            }
-          }
-      catch(Exception e) {
-          System.out.println("Exception occurred: STOP");
-      }
+      // try {
+      //     if(suffixArray.length != 0) { System.out.println("check7: OK"); }
+      //       else {
+      //         System.out.println("WRONG");
+      //         System.out.println("case7 : checking s4.B183353.Frequencer");
+      //         System.out.print("mySpaceに文字が指定されていません");
+      //       }
+      //     }
+      // catch(Exception e) {
+      //     System.out.println("Exception occurred: STOP");
+      // }
 
-      try {
-          if(myTarget.length != 0) { System.out.println("check8: OK"); }
-          else {
-            System.out.println("WRONG");
-            System.out.println("case8 : checking s4.B183360.Frequencer");
-            System.out.print("Targetに文字が指定されていません");}
-      }
-      catch(Exception e) {
-          System.out.println("Exception occurred: STOP");
-      }
+      // try {
+      //     if(myTarget.length != 0) { System.out.println("check8: OK"); }
+      //     else {
+      //       System.out.println("WRONG");
+      //       System.out.println("case8 : checking s4.B183353.Frequencer");
+      //       System.out.print("Targetに文字が指定されていません");}
+      // }
+      // catch(Exception e) {
+      //     System.out.println("Exception occurred: STOP");
+      // }
 
-      for(int i = suffixArray.length-1; i > 0 ; i--){
+      for(int i = suffixArray.length-1; i >= 0 ; i--){
         if(targetCompare(suffixArray[i],start,end) == 0){
-          System.out.print("end :");
-          System.out.println(i+1);
+          // System.out.print("end :");
+          // System.out.println(i+1);
           return i+1;
         }
       }
@@ -306,29 +307,29 @@ public class Frequencer implements FrequencerInterface{
             frequencerObject.setTarget(target.getBytes());
             //
             //**** Please write code to check subByteStartIndex, and subByteEndIndex //
-            try {
-                if(space.length() != 0 )
-                { System.out.println("check1: OK"); }
-                else {
-                  System.out.println("WRONG");
-                  System.out.println("case1 : checking s4.B183360.Frequencer");
-                  System.out.print("mySpaceに文字が指定されていません");}
-            }
-            catch(Exception e) {
-                System.out.println("Exception occurred: STOP");
-            }
+            // try {
+            //     if(space.length() != 0 )
+            //     { System.out.println("check1: OK"); }
+            //     else {
+            //       System.out.println("WRONG");
+            //       System.out.println("case1 : checking s4.B183353.Frequencer");
+            //       System.out.print("mySpaceに文字が指定されていません");}
+            // }
+            // catch(Exception e) {
+            //     System.out.println("Exception occurred: STOP");
+            // }
 
-            try {
-                if(target.length() != 0 )
-                { System.out.println("check2: OK"); }
-                else {
-                  System.out.println("WRONG");
-                  System.out.println("case2 : checking s4.B183360.Frequencer");
-                  System.out.print("Targetに文字が指定されていません");}
-            }
-            catch(Exception e) {
-                System.out.println("Exception occurred: STOP");
-            }
+            // try {
+            //     if(target.length() != 0 )
+            //     { System.out.println("check2: OK"); }
+            //     else {
+            //       System.out.println("WRONG");
+            //       System.out.println("case2 : checking s4.B183353.Frequencer");
+            //       System.out.print("Targetに文字が指定されていません");}
+            // }
+            // catch(Exception e) {
+            //     System.out.println("Exception occurred: STOP");
+            // }
 
 
 
