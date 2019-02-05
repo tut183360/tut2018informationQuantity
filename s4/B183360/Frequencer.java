@@ -305,31 +305,31 @@ public class Frequencer implements FrequencerInterface{
             */
 
             frequencerObject.setTarget(target.getBytes());
-            //
+            
             //**** Please write code to check subByteStartIndex, and subByteEndIndex //
-            // try {
-            //     if(space.length() != 0 )
-            //     { System.out.println("check1: OK"); }
-            //     else {
-            //       System.out.println("WRONG");
-            //       System.out.println("case1 : checking s4.B183353.Frequencer");
-            //       System.out.print("mySpaceに文字が指定されていません");}
-            // }
-            // catch(Exception e) {
-            //     System.out.println("Exception occurred: STOP");
-            // }
+            try {
+                if(space.length() != 0 )
+                { System.out.println("check1: OK"); }
+                else {
+                  System.out.println("WRONG");
+                  System.out.println("case1 : checking s4.B183353.Frequencer");
+                  System.out.print("mySpaceに文字が指定されていません");}
+            }
+            catch(Exception e) {
+                System.out.println("Exception occurred: STOP");
+            }
 
-            // try {
-            //     if(target.length() != 0 )
-            //     { System.out.println("check2: OK"); }
-            //     else {
-            //       System.out.println("WRONG");
-            //       System.out.println("case2 : checking s4.B183353.Frequencer");
-            //       System.out.print("Targetに文字が指定されていません");}
-            // }
-            // catch(Exception e) {
-            //     System.out.println("Exception occurred: STOP");
-            // }
+            try {
+                if(target.length() != 0 )
+                { System.out.println("check2: OK"); }
+                else {
+                  System.out.println("WRONG");
+                  System.out.println("case2 : checking s4.B183353.Frequencer");
+                  System.out.print("Targetに文字が指定されていません");}
+            }
+            catch(Exception e) {
+                System.out.println("Exception occurred: STOP");
+            }
 
 
 
