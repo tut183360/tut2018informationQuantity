@@ -61,7 +61,7 @@ public class InformationEstimator implements InformationEstimatorInterface{
 
 
     public double estimation(){
-      if(targetReady == false){ //エラー処理:when the target is not set or Target's length
+      if(targetReady == false){ //エラー処理:when the target is not set or Target's length is zero
         System.out.println("setTarget()が行われていません。");
         
         return 0.0;
@@ -81,9 +81,6 @@ public class InformationEstimator implements InformationEstimatorInterface{
         if(i == 0){
           myFrequencer.setTarget(subBytes(myTarget, start, end)); //myTargetの対象の文字列をセット
       		iq[i] = iq(myFrequencer.frequency());
-          if(Double.isInfinite(iq[i])){
-            iq[i] = Double.MAX_VALUE;
-          }
         }
         else{
           for(int j=0; j<end; j++){
@@ -101,6 +98,11 @@ public class InformationEstimator implements InformationEstimatorInterface{
         }
 
       }
+
+      if(Double.isInfinite(iq[myTarget.length-1])){ //It returns Double.MAX_VALUE, when the true value is infinite
+        return Double.MAX_VALUE;
+      }
+
       return iq[myTarget.length-1];
     }
 
@@ -122,9 +124,9 @@ public class InformationEstimator implements InformationEstimatorInterface{
   	value = myObject.estimation();
   	System.out.println(">00 "+value);
 
-    myObject.setTarget("9".getBytes());
-    value = myObject.estimation();
-    System.out.println(">9 "+value);
+    // myObject.setTarget("09".getBytes());
+    // value = myObject.estimation();
+    // System.out.println(">09 "+value);
 
   }
 }
